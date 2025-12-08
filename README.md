@@ -46,3 +46,5 @@ A README file with instructions on how to set up and run the tests.
 A brief explanation of your design choices and any additional improvements you would make if given more time. 
  
 During the interview, you will need to showcase your proficiency with this framework, and your coding abilities will be evaluated through a brief live coding exercise. 
+
+The use of AI coding assistants is permitted. However, please ensure the submission represents your own understanding, as you will be required to explain, justify and extend your code during the interview.
