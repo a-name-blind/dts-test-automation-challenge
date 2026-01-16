@@ -22,14 +22,17 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
-    e2e: {
-        baseUrl: 'https://the-internet.herokuapp.com/',
-        defaultCommandTimeout: 10000,
-        viewportHeight: 960,
-        viewportWidth: 1530,
-        chromeWebSecurity: false,
-        specPattern: '**/*.feature',
-        setupNodeEvents,
-    }
+  e2e: {
+    baseUrl: 'https://the-internet.herokuapp.com/',
+    defaultCommandTimeout: 10000,
+    viewportHeight: 960,
+    viewportWidth: 1530,
+    chromeWebSecurity: false,
+    retries: {
+      openMode: 1,
+      runMode: 1
+    },
+    specPattern: '**/*.feature',
+    setupNodeEvents,
+  }
 });
-    

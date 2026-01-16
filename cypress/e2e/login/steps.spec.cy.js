@@ -35,11 +35,11 @@ When(/^I click on "([^"]*)" (button|link)$/, (text, element) => {
             break;
         default:
             throw new Error(`Element with text:${element} not found`);
-    }
+    };
 });
 
 Then(/^I should see the  "([^"]*)" message$/, (message) => {
-        cy.get(data.alertMessage).should('contain.text', message);
+        cy.verifyAccessMessage(message);
 });
 
             

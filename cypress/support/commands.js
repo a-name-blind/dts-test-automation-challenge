@@ -1,4 +1,3 @@
-
 // ***********************************************
 // Visit https://on.cypress.io/custom-commands to
 // learn more about custom commands.
@@ -19,4 +18,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-        
+
+Cypress.Commands.add('verifyAccessMessage', (message) => {
+    cy.fixture('selectors').then((selectors) => {
+        cy.get(selectors.alertMessage).invoke('text').then((text) => {
+            expect(text).to.include(message);
+        });
+    });
+});
