@@ -4,7 +4,13 @@
   "description": "A Cypress project configured automatically",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress open --e2e",
+    "headless": "npx cypress run",
+    "chrome": "npx cypress run -b chrome",
+    "firefox": "npx cypress run -b firefox",
+    "edge": "npx cypress run -b edge",
+    "negative": "npx cypress run --env TAGS='@negative'",
+    "positive": "npx cypress run --env TAGS='@positive'"
   },
   "devDependencies": {
     "cypress": "latest",
