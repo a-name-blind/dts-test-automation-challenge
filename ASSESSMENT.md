@@ -64,6 +64,15 @@ The framework includes comprehensive test coverage for login functionality:
 - **Tag-based Organization**: Scenarios are tagged with @positive and @negative for easy filtering and execution
 - **Reusable Step Definitions**: Common actions are abstracted into reusable step definitions
 
+### Test Execution Guide
+
+- Clone project to a desired location and navigate to the location
+- Open terminal and run `npm i` or `npm install` to install all dependencies. You can alternatively run `npm ci` for a clean install via the `package-lock.json`
+- To run the test using a browser, run `npm test`.
+- To run headlessly, run `npm run headless`
+- To run based on tags, run `npm run positive` or `npm run negative`
+- To run headless using specific browser, run `npm run chrome` or change **chrome** to **firefox** or **edge**
+
 ## Benefits of the Implementation
 
 ### 1. **Maintainability**
@@ -112,3 +121,39 @@ The framework includes comprehensive test coverage for login functionality:
    -  **Decoupled Steps**: Login steps seem common but it is decoupled to establish what step triggered the error
    -  **Message Verification**: This step is common so creating a custom command seem appropriate to verify it.
 
+## Potential Improvements   
+
+### 1. **Additional Test Coverage**
+   - **Current State**: Focus on login functionality only
+   - **Improvement**:
+     - Add edge cases (empty fields, special characters, SQL injection attempts)
+     - Implement accessibility testing
+     - Add visual regression testing
+     - Test responsive design on different viewport sizes
+   - **Benefit**: More comprehensive test coverage
+
+### 2. **Introduce Cross Browser Testing Tools**
+   - **Current State**: Test runs in the pipeline on the default Cypress Electron Browser
+   - **Improvement**:
+     - Configure a Cross Browser Testing Tool like Lambdatest or Browserstack
+   - **Benefit**: Improves Test confidence and helps to understand if there are browser specific issues early and faster  
+
+
+### 3. **Environment Configuration**
+   - **Current State**: Single base URL configuration 
+   - **Improvement**:
+     - Create environment-specific configuration files
+     - Environment variable management (to save access credentials for Cross Browser Tools)
+   - **Benefit**: Secured access and seamless testing
+
+## Conclusion
+
+This test automation framework provides a solid foundation for testing login functionality using modern tools and best practices. The BDD approach makes tests readable and maintainable, while the Cypress framework ensures reliable and fast test execution. The framework is well-structured and can be easily extended to cover additional functionality and scenarios.
+
+The implementation demonstrates proficiency in:
+
+- **Test Automation Frameworks**: Effective use of Cypress and Cucumber
+- **Web Application Testing**: Comprehensive coverage of login scenarios
+- **Best Practices**: Selector externalization, reusable steps, custom commands, and clear test structure
+
+With the suggested improvements, the framework would become even more robust, maintainable, and suitable for enterprise-level test automation.
