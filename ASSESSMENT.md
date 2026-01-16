@@ -1,5 +1,5 @@
-<p align="center" style="background-color:black;">
-<img src="https://jobs.justice.gov.uk/portal/13/images/logo--default.svg">
+<p align="center">
+<img src="./moj.png">
 </p>
 <h2 align="center">HM Courts and Tribunal Service: Technical Assessment</h2>
 
